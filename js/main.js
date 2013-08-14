@@ -5,16 +5,16 @@ window.App = {
 
 App.Models.leaseInfo = Backbone.Model.extend({
     defaults : {
-        date         : '11/2/2012',
-        current      : 12244,
-        years        : 3,
-        milesAllowed : 15000,
-        overagesCost : 0.25
-        // date         : 0,
-        // current      : 0,
-        // years        : 0,
-        // milesAllowed : 0,
-        // overagesCost : 0
+        // date         : '11/2/2012',
+        // current      : 12244,
+        // years        : 3,
+        // milesAllowed : 15000,
+        // overagesCost : 0.25
+        date         : 0,
+        current      : 0,
+        years        : 0,
+        milesAllowed : 0,
+        overagesCost : 0
     },
 
     validate: function(attrs){
