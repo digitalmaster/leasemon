@@ -1,0 +1,30 @@
+.container{
+    max-width: 520px;
+    border-left: 1px solid #DADADA;
+    border-right: 1px solid #DADADA;
+    border-bottom: 1px solid #DADADA;
+    padding: 5px 15px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.form-control:-moz-placeholder {
+  color: #FFF;
+}
+
+.form-control::-moz-placeholder {
+  color: #FFF;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #FFF;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #FFF;
+}

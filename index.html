@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sunday Project: Lease Milleage Monitor</title>
+    <!-- build:style all -->
+    <link rel="stylesheet" href="bower_components/bootswatch/flatly/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bower_components/Pikaday/css/pikaday.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- /build -->
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="row text-center">
+        <h1>Lease Milleage Calculator</h1>
+        <p>Just a simple, free way to keep track of your car lease milleage.</p>
+      </div>
+
+      <!-- Form -->
+      <div class="row">
+        <form id="leaseInfo" class="">
+          <fieldset>
+            <div class="form-group">
+              <label for="date">Start Date:</label>
+              <div class="input-group">
+              <input type="text" class="form-control" id="date" name="date" placeholder="Click to select date">
+              <span class="input-group-addon"><i class="icon-calendar"></i></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="current">Current Mileage:</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="current" name="current" placeholder="10244">
+                <span class="input-group-addon"><i class="icon-road"></i></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="years">Term Years:</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="years" name="years" placeholder="2">
+                <span class="input-group-addon"><i class="icon-time"></i></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="milesAllowed">Miles Per year:</label>
+              <select class="form-control" id="milesAllowed" name="milesAllowed">
+                  <option value="">Select</option>
+                  <option value="10000">10,000</option>
+                  <option value="11000">11,000</option>
+                  <option value="12000">12,000</option>
+                  <option value="13000">13,000</option>
+                  <option value="14000">14,000</option>
+                  <option value="15000">15,000</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="overagesCost">Overages Cost:</label>
+              <div class="input-group">
+                <input class="form-control" id="overagesCost" name="overagesCost" type="text" placeholder="0.25">
+                <span class="input-group-addon"><i class="icon-dollar"></i></span>
+              </div>
+            </div>
+          </fieldset>
+        </form>  
+      </div><!-- end .row -->
+
+      <!-- Results -->
+      <div class="row">
+        <script type="text/template" id="info_pane">
+          <legend>Information:</legend>
+          <p>You should be driving around <b><%= perDay %></b> miles per day.</p>
+          <p>You should be at or under <b><%= shouldBe %></b> miles.</p>
+          <legend>Your Current Status:</legend>
+          <p>You are <b><%= difference %></b> miles <%= overUnder %>.</p>
+          <p>You have <b><%= daysLeft %></b> days left on your contract.</p>
+          <p>You should drive about <b><%= shouldDrive %></b> miles per day to get back on track.</p>
+          <p>You have <b><%= leftInYear %></b> miles left this contract year</p>
+          <p>You will have to pay <b>$<%= willCost %></b></p>
+        </script>
+      </div>
+    </div><!-- end .container -->
+
+    <!-- build:script min -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/backboneValidateAll/src/javascripts/Backbone.validateAll.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/Pikaday/pikaday.js"></script>
+    <script src="js/main.js"></script>
+    <!-- /build -->
+  </body>
+</html>
