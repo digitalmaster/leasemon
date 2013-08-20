@@ -8,6 +8,6 @@
     "underscore": "~1.5.1",
     "pikaday": "~1.1.0",
     "moment": "~2.1.0",
-    "bootswatch": "~3.0.0-rc1"
+    "bootswatch": ">=3.0"
   }
 }
